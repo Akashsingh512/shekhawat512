@@ -1,2 +1,96 @@
+#include<stdio.h>
+#include <conio.h>
+void sum(int,int);
+void sub(int,int);
+void multi(int,int);
+void div(int,int);
+void main()
+    {
+            int a,b,ch;
+            printf("**** Calculator******");
+            printf("\n 1: Add");
+            printf("\n 2: Sub");
+            printf("\n 3: Multi");
+            printf("\n 4: Div");
+            printf("\n 5: Exit");
+            printf("\n Enter the value of choice");
+            scanf("%d" ,&ch);
+            switch(ch)
+            {
+                case 1:
+                        {printf("add");
+                            printf("\nenter the value of a & b");
+                            scanf("%d%d", &a,&b);
+                            sum(a,b);
+                            break;
+                            
+                        }
+                case 2:
+                {
+                    
+                    printf("sub");
+                    printf("\n the value of a & b");
+                    scanf( "%d%d", &a,&b);
+                    sub(a,b);
+                    printf("\n the value of a & b");
+                    scanf("%d%d",&a,&b);
+                    sub(a,b);
+                    break;
+                }
+                
+                case 3:
+                 {
+                     printf("multi");
+                     printf("\n the value of a & b");
+                     multi(a,b);
+                     break;
+                 }
+                 
+                case 4:
+                {
+                    printf("div");
+                    printf("\n the value of a & b");
+                    scanf("%d%d",&a,&b);
+                    div(a,b);
+                    break;
+                }
+                case 5:
+                {
+                    
+                    printf("\n bye see you");
+                }
+                
+                default:
+                {
+                    
+                }
+            }
+          getch();
+        }
+    
 
-
+void sum(int x,int y)
+        {
+            int sum;
+            sum=x+y;
+            printf("sum=%d",sum);
+        }
+void sub(int x,int y)
+    {
+        int sub;
+            sub=x-y;
+            printf("sub=%d",sub);
+    }
+
+    void multi(int x, int y)
+            {
+                int multi;
+                multi=x*y;
+                printf("multi=%d", multi) ;
+            }
+void div(int x, int y)
+            {
+            int div;
+            div=x/y;
+            printf("div=%d" , div) ;
+            }
